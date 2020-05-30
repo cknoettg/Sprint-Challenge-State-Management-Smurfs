@@ -5,17 +5,10 @@ import { fetchSmurf } from '../actions/smurfAction';
 const Smurfy = props => {
   return(
     <div>
-      {!props.name && props.fetchingSmurfs && (
-        <h2>Find a Smurf</h2>
-      )}
-
+      
       <button 
         onClick={() => props.fetchSmurf()}>Get a Smurf</button>
 
-        {props.smurfs
-          &&
-        !props.fetchingSmurfs
-          &&
         <div>
           {props.smurfs.map(smurf => {
             return (
@@ -27,7 +20,6 @@ const Smurfy = props => {
             )
           })}
         </div>
-      }
 
     </div>
   )
