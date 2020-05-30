@@ -18,8 +18,8 @@ export const smurfReducer = (state = initialState, action) => {
       };
     case ADD_NEW_SMURF:
 	return{...state,
-	fetchingSmurfs: false,
-	smurfs: action.payload};
+        fetchingSmurfs: false,
+        smurfs: action.payload};
     default:
       return state;
   }
