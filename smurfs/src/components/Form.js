@@ -26,9 +26,8 @@ const Form = () => {
     setSmurf({
       name: "",
       height: null,
-      age: null
+      age: ""
     });
-    console.log(smurf);
   };
 
   return (

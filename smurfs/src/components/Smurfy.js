@@ -4,15 +4,15 @@ import { fetchSmurf } from '../actions/smurfAction';
 
 const Smurfy = props => {
   return(
-    <div>
+    <div key="top">
       
       <button 
-        onClick={() => props.fetchSmurf()}>Get a Smurf</button>
+        onClick={() => props.fetchSmurf()}>Get Smurfs</button>
 
-        <div>
+        <div key="middle"> 
           {props.smurfs.map(smurf => {
             return (
-              <div key={smurf}>
+              <div key="bottom">
                 <h2 key={smurf.id}>{`Name: ${smurf.name}`}</h2>
                 <h2 key={smurf.id}>{`Height: ${smurf.height}`}</h2>
                 <h2 key={smurf.id}>{`Age: ${smurf.age}`}</h2>                
