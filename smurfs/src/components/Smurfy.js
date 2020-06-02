@@ -12,10 +12,10 @@ const Smurfy = props => {
         <div key="middle"> 
           {props.smurfs.map(smurf => {
             return (
-              <div key="bottom">
-                <h2 key={smurf.id}>{`Name: ${smurf.name}`}</h2>
-                <h2 key={smurf.id}>{`Height: ${smurf.height}`}</h2>
-                <h2 key={smurf.id}>{`Age: ${smurf.age}`}</h2>                
+              <div key={`bottom-${smurf.id}`}>
+                <h2 key={`name-${smurf.id}`}>{`Name: ${smurf.name}`}</h2>
+                <h2 key={`height-${smurf.id}`}>{`Height: ${smurf.height}`}</h2>
+                <h2 key={`age-${smurf.id}`}>{`Age: ${smurf.age}`}</h2>                
               </div>
             )
           })}
